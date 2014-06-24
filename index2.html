@@ -1,24 +1,19 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Angular.js</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
 </head>
 <body>
 <div ng-controller="myController">
     <h1>{{author.name}}</h1>
     <p>{{author.title + ', ' + author.company}}</p>
 </div>
-<script>
-    function myController($scope) {
-        $scope.author = {
-            'name' : 'Cavin',
-            'title' : 'front-end developer',
-            'company' : 'Stizelwebs'
-        }
-    }
+<ul class="artistlist">
+    <li class="artist cf" ng-repeat="item in artists"></li>
+</ul>
 
-</script>
 </body>
 </html>
