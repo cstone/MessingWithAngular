@@ -6,16 +6,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
 </head>
 <body>
-<div>
+<div ng-controller="myController">
     <h1>{{author.name}}</h1>
     <p>{{author.title + ', ' + author.company}}</p>
 </div>
 <script>
-    $scope.author = {
-        'name' : 'Cavin',
-        'title' : 'front-end developer',
-        'company' : 'Stizelwebs'
+    function myController($scope) {
+        $scope.author = {
+            'name' : 'Cavin',
+            'title' : 'front-end developer',
+            'company' : 'Stizelwebs'
+        }
     }
+
 </script>
 </body>
 </html>
